@@ -7,6 +7,7 @@
       margin: 0;
       padding: 0;
       font-family: "geogrotesque", sans-serif;
+      text-transform: uppercase;
 }
 
 .container {
@@ -19,8 +20,8 @@
 }
 
 .main-section {
-      /* background-color: #0c0a1d; */
-      background-color: blue;
+      background-color: #0c0a1d;
+      /* background-color: blue; */
       height: 90vh;
       width: 50.4vh;
 }
@@ -55,7 +56,7 @@ video {
       /* background-color: coral; */
 }
 
-.pub-section{
+.pub-section {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -73,6 +74,37 @@ video {
       margin-left: 5%;
 }
 
+.map-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -0.8vh;
+}
+
+.map-section p {
+      text-align: center;
+      margin-bottom: 3%;
+      color: #fff;
+}
+
+.map-section p:nth-child(1) {
+      font-size: 2.3vh;
+}
+
+.map-section p:nth-child(2) {
+      max-width: 40%;
+      font-size: 2vh;
+}
+
+#mapid { 
+      padding-top: 1vh;
+      height: 20vh; 
+      width: 100%;
+      background-color: teal;
+      clip-path: circle();
+}
+
 .arrow {
       width: 4vh;
       position: absolute;
@@ -84,7 +116,6 @@ video {
       font-size: 3.90vh;
       text-decoration: none;
       border-style: none;
-      text-transform: uppercase;
       position: relative;
       bottom: 6vh;
       background: linear-gradient(to right, #ab8d58, #f9ddaf, #ab8d58, #f9ddaf);
