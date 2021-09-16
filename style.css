@@ -1,6 +1,6 @@
 @font-face {
       font-family: "geogrotesque";
-      src: url('geogrotesque.otf') format('truetype');
+      src: url('./assets/font/geogrotesque.otf') format('truetype');
 }
 
 * {
@@ -19,8 +19,8 @@
 }
 
 .main-section {
-      /* background-color: #0c0a1d; */
-      background-color: goldenrod;
+      background-color: #0c0a1d;
+      /* background-color: blue; */
       height: 90vh;
       width: 50.4vh;
 }
@@ -39,9 +39,71 @@
       margin: 5% 0 0 5%;
 }
 
+#video-section {
+      margin-bottom: 13%;
+}
+
 video {
       margin: 0;
       padding: 0;
       width: 100%;
       clip-path: inset(14% 0px);
+}
+
+#bottom-section {
+      width: 100%;
+}
+
+.pub-section{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+}
+
+.pub-section img:nth-child(1){
+      width: 22%;
+}
+.pub-section img:nth-child(2){
+      width: 50%;
+      margin-left: 5%;
+}
+
+/* ANIMATIONS & TRANSITIONS */
+
+.video-disaparition {
+      animation-name: collapsing;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+}
+
+.bottom-up {
+      animation-name: upTranslation;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+}
+
+@keyframes collapsing {
+      from { 
+            transform: scale(1); 
+            opacity: 1;
+      }
+      to { 
+            transform: scale(0); 
+            opacity: 0;
+      }
+}
+
+@keyframes upTranslation {
+      from { 
+            margin-top: 0;
+      }
+      to { 
+            margin-top: -65%; 
+      }
 }
