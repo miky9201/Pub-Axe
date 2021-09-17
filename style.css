@@ -1,7 +1,11 @@
+/* FONT-FACE */
+
 @font-face {
       font-family: "geogrotesque";
       src: url('./assets/font/geogrotesque.otf') format('truetype');
 }
+
+/*GENERAL SETTINGS */
 
 * {
       margin: 0;
@@ -9,6 +13,13 @@
       font-family: "geogrotesque", sans-serif;
       text-transform: uppercase;
 }
+
+video {
+      width: 100%;
+      clip-path: inset(14% 0px);
+}
+
+/* MAIN CONTAINER */
 
 .container {
       height: 100vh;
@@ -19,12 +30,15 @@
       align-items: center;
 }
 
+/* MAIN SECTION */
+
 .main-section {
       background-color: #0c0a1d;
-      /* background-color: blue; */
       height: 90vh;
       width: 50.4vh;
 }
+
+/* HEADER SECTION */
 
 .header {
       width: 100%;
@@ -40,21 +54,19 @@
       margin: 5% 0 0 5%;
 }
 
+/* VIDEO SECTION */
+
 #video-section {
       margin-bottom: 13%;
 }
 
-video {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      clip-path: inset(14% 0px);
-}
+/* BOTTOM SECTION */
 
 #bottom-section {
       width: 100%;
-      /* background-color: coral; */
 }
+
+/* Pub Section */
 
 .pub-section {
       display: flex;
@@ -62,7 +74,6 @@ video {
       justify-content: center;
       align-items: center;
       margin-top: 5%;
-      /* background-color: red; */
 }
 
 .pub-section img:nth-child(1) {
@@ -73,6 +84,8 @@ video {
       width: 50%;
       margin-left: 5%;
 }
+
+/* Map Section */
 
 #map-section {
       display: flex;
@@ -105,6 +118,8 @@ video {
       clip-path: circle();
 }
 
+/* Button Section */
+
 #arrow {
       width: 4vh;
       position: absolute;
@@ -134,12 +149,10 @@ video {
       border-bottom-right-radius: 0;
 }
 
-.none {
-      display: none;
-}
 
 /* ANIMATIONS & TRANSITIONS */
 
+/* Effect for collapsing Video Container */
 .video-disaparition {
       animation-name: collapsing;
       animation-duration: 0.5s;
@@ -148,6 +161,17 @@ video {
       animation-fill-mode: forwards;
 }
 
+@keyframes collapsing {
+      from { 
+            transform: scale(1); 
+            opacity: 1;
+      } to { 
+            transform: scale(0); 
+            opacity: 0;
+      }
+}
+
+/* Effect for up transitioning the bottom section */
 .bottom-up {
       animation-name: upTranslation;
       animation-duration: 0.8s;
@@ -156,6 +180,15 @@ video {
       animation-fill-mode: forwards;
 }
 
+@keyframes upTranslation {
+      from { 
+            margin-top: 0;
+      } to { 
+            margin-top: -65%; 
+      }
+}
+
+/* Effect for up transitioning the "J'y Vais" button */
 .button-up {
       animation-name: buttonUpTranslation;
       animation-duration: 0.8s;
@@ -164,37 +197,17 @@ video {
       animation-fill-mode: forwards;
 }
 
-.bounce {
-      animation: bounce 3s infinite ease-in-out;
-}
-
-@keyframes collapsing {
-      from { 
-            transform: scale(1); 
-            opacity: 1;
-      }
-      to { 
-            transform: scale(0); 
-            opacity: 0;
-      }
-}
-
-@keyframes upTranslation {
-      from { 
-            margin-top: 0;
-      }
-      to { 
-            margin-top: -65%; 
-      }
-}
-
 @keyframes buttonUpTranslation {
       from { 
             margin-top: 0;
-      }
-      to { 
+      } to { 
             margin-top: -6vh; 
       }
+}
+
+/* Effect for arrow boucing */
+.bounce {
+      animation: bounce 3s infinite ease-in-out;
 }
 
 @keyframes bounce {
