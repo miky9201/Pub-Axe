@@ -164,6 +164,10 @@ video {
       animation-fill-mode: forwards;
 }
 
+.bounce {
+      animation: bounce 3s infinite ease-in-out;
+}
+
 @keyframes collapsing {
       from { 
             transform: scale(1); 
@@ -190,5 +194,13 @@ video {
       }
       to { 
             margin-top: -6vh; 
+      }
+}
+
+@keyframes bounce {
+      0%, 12%, 25%, 100% { 
+            bottom: 15.4%; 
+      } 6%, 18% { 
+            bottom: 17%; 
       }
 }
