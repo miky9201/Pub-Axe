@@ -74,7 +74,7 @@ video {
       margin-left: 5%;
 }
 
-.map-section {
+#map-section {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -82,17 +82,17 @@ video {
       margin-top: -0.8vh;
 }
 
-.map-section p {
+#map-section p {
       text-align: center;
       margin-bottom: 3%;
       color: #fff;
 }
 
-.map-section p:nth-child(1) {
+#map-section p:nth-child(1) {
       font-size: 2.3vh;
 }
 
-.map-section p:nth-child(2) {
+#map-section p:nth-child(2) {
       max-width: 40%;
       font-size: 2vh;
 }
@@ -105,25 +105,37 @@ video {
       clip-path: circle();
 }
 
-.arrow {
+#arrow {
       width: 4vh;
       position: absolute;
       bottom: 15.4%;
 }
 
-#bottom-button {
-      padding-top: 0.5%;
+#profite-button {
+      position: relative;
+      bottom: 6vh;
+}
+
+#go-button {
+      position: relative;
+      bottom: 6vh;
+}
+
+.button {
+      padding-top: 0.5vh;
       font-size: 3.90vh;
       text-decoration: none;
       border-style: none;
-      position: relative;
-      bottom: 6vh;
       background: linear-gradient(to right, #ab8d58, #f9ddaf, #ab8d58, #f9ddaf);
       width: 50.4vh;
       height: 6vh;
       border-radius: 50% / 100%;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+}
+
+.none {
+      display: none;
 }
 
 /* ANIMATIONS & TRANSITIONS */
@@ -138,7 +150,15 @@ video {
 
 .bottom-up {
       animation-name: upTranslation;
-      animation-duration: 0.5s;
+      animation-duration: 0.8s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+}
+
+.button-up {
+      animation-name: buttonUpTranslation;
+      animation-duration: 0.8s;
       animation-iteration-count: 1;
       animation-timing-function: ease;
       animation-fill-mode: forwards;
@@ -161,5 +181,14 @@ video {
       }
       to { 
             margin-top: -65%; 
+      }
+}
+
+@keyframes buttonUpTranslation {
+      from { 
+            margin-top: 0;
+      }
+      to { 
+            margin-top: -6vh; 
       }
 }
