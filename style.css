@@ -14,6 +14,10 @@
       text-transform: uppercase;
 }
 
+body {
+      background-color: #111;
+}
+
 video {
       width: 100%;
       clip-path: inset(14% 0px);
